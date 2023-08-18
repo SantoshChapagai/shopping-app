@@ -9,3 +9,6 @@ git clone https://github.com/SantoshChapagai/shopping-app.git
 npm install
 npm start
 ```
+
+### About
+- Application that fetch the data from fake store ap
