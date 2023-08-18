@@ -2,12 +2,12 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 // import { Button } from 'react-bootstrap';
 
-const Test = () => {
+const AddToCart = () => {
   return (
     <div>
-      <Button variant='primary'>Example Button</Button>
+      <Button variant='primary'>ADD TO CART</Button>
     </div>
   );
 };
 
-export default Test;
+export default AddToCart;

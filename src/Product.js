@@ -1,15 +1,15 @@
 import React from 'react';
-import "./product.css"
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import AddToCart from './AddToCartButton';
 
 const Product = (props) => {
   const { id, title, category, price, description, image, rating } = props;
   return (
     <div style={{ margin: "1rem" }}>
       <CardGroup>
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src={image} />
+        <Card style={{ width: '18rem', height: "75rem" }}>
+          <Card.Img variant="top" src={image} style={{ width: "auto", height: "15rem" }} />
           <Card.Body>
             <Card.Text> {id}</Card.Text>
             <Card.Title>{title}</Card.Title>
@@ -18,6 +18,7 @@ const Product = (props) => {
             <Card.Text>{description}</Card.Text>
             <Card.Text>{rating.rate}</Card.Text>
             <Card.Text>{rating.count}</Card.Text>
+            <Card.Link><AddToCart /></Card.Link>
           </Card.Body>
         </Card>
       </CardGroup>
