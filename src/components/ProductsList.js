@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react';
-import Product from './Product';
+import Product from '../pages/Product';
 
 const api = "https://fakestoreapi.com/products/";
 const { data: products } = await axios.get(api);

@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
-import AddToCart from './AddToCartButton';
+import AddToCart from '../components/AddToCartButton';
 
 const Product = (props) => {
   const { id, title, category, price, description, image, rating } = props;
