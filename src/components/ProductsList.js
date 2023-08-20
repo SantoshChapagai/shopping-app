@@ -6,13 +6,15 @@ const api = "https://fakestoreapi.com/products/";
 const { data: products } = await axios.get(api);
 
 
-const ProductsList = () => {
+const ProductsList = (props) => {
 
-  console.log(products);
+
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
       {products.map((product) => (
-        <Product key={product.id} {...product} />
+        <Product key={product.id} {...product}
+          setCount={props.setCount}
+        />
       ))}
     </div>
   );

@@ -2,10 +2,10 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 // import { Button } from 'react-bootstrap';
 
-const AddToCart = () => {
+const AddToCart = (props) => {
   return (
     <div>
-      <Button variant='primary'>ADD TO CART</Button>
+      <Button variant='primary' onClick={props.click}>ADD TO CART</Button>
     </div>
   );
 };

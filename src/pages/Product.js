@@ -1,10 +1,19 @@
-import React from 'react';
+
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import AddToCart from '../components/AddToCartButton';
 
 const Product = (props) => {
-  const { id, title, category, price, description, image, rating } = props;
+  const { id, title, category, price, description, image, rating, setCount } = props;
+
+
+
+  const addHandler = () => {
+    const newCount = props.count + 1;
+    setCount(newCount);
+  }
+
+
   return (
     <div style={{ margin: "1rem" }}>
       <CardGroup>
@@ -18,7 +27,7 @@ const Product = (props) => {
             <Card.Text>{description}</Card.Text>
             <Card.Text>{rating.rate}</Card.Text>
             <Card.Text>{rating.count}</Card.Text>
-            <Card.Link><AddToCart /></Card.Link>
+            <Card.Link><AddToCart click={addHandler} /></Card.Link>
           </Card.Body>
         </Card>
       </CardGroup>
