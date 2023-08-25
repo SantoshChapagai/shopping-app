@@ -1,9 +1,11 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
+import { Container, Navbar } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+// import { Navbar, Container } from 'react-bootstrap/Navbar';
 
-const Header = () => {
+
+const Header = (props) => {
+
   return (
     <header>
       <Navbar bg="dark" data-bs-theme="dark">
@@ -16,7 +18,7 @@ const Header = () => {
         </Container>
         <div className="cart">
           <span className="material-symbols-outlined cart-count">
-            shopping_cart
+            shopping_cart{props.count}
           </span>
         </div>
 
