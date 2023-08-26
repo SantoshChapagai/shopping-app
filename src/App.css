@@ -3,11 +3,18 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: fixed;
   bottom: 0;
   background-color: #212529;
   color: white;
   height: 3rem;
   width: 100%;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
 
 a {
