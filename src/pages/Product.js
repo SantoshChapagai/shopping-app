@@ -25,6 +25,7 @@ const Product = (props) => {
   const totalHeight = show ? "auto" : "auto";
 
   return (
+
     <div style={{ margin: "1rem" }}>
       <CardGroup>
         <Card style={{ width: '18rem', height: totalHeight }}>
@@ -47,6 +48,7 @@ const Product = (props) => {
         </Card>
       </CardGroup>
     </div>
+
   );
 };
 

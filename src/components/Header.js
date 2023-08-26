@@ -1,10 +1,12 @@
 import React from 'react';
 import { Container, Navbar } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
+import { useCart } from './Context';
 // import { Navbar, Container } from 'react-bootstrap/Navbar';
 
 
-const Header = (props) => {
+const Header = () => {
+  const { count } = useCart();
 
   return (
     <header>
@@ -17,8 +19,8 @@ const Header = (props) => {
           </Nav>
         </Container>
         <div className="cart">
-          <span className="material-symbols-outlined cart-count">
-            shopping_cart{props.count}
+          <span className="material-symbols-outlined cart-count count">
+            <p>shopping_cart</p><p className='num'>{count > 0 ? count : ""}</p>
           </span>
         </div>
 
