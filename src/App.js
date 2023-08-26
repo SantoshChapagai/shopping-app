@@ -4,7 +4,7 @@ import router from "./router/router"
 import { RouterProvider } from "react-router-dom";
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { CartProvider } from './components/Context';
+import { CartProvider } from './hooks/Context';
 
 
 function App() {

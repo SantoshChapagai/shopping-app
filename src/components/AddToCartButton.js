@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import { useCart } from './Context';
+import { useCart } from '../hooks/Context';
 
 // import { Button } from 'react-bootstrap';
 
