@@ -8,8 +8,6 @@ import { CartProvider } from './hooks/Context';
 
 
 function App() {
-
-
   return (
     <CartProvider>
       <div className="App">

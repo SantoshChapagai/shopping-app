@@ -3,10 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Product from '../pages/Product';
 import Search from './Search';
 
-
 const api = "https://fakestoreapi.com/products/";
-// const { data: products } = await axios.get(api);
-
 
 const ProductsList = () => {
   const [products, setProducts] = useState([]);
@@ -66,11 +63,8 @@ const ProductsList = () => {
 
     }
     setFilterItems(filteredProducts);
-    // return filteredProducts;
+
   }
-
-
-
 
   return (
     <div>

@@ -7,9 +7,19 @@
 }
 
 .arrange {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .arrange-category {
   display: flex;
+}
+
+select {
+  height: 2rem;
+}
+
+input,
+select {
+  border: 1px solid black;
+  border-radius: 2px;
 }
