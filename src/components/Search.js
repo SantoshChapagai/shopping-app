@@ -2,7 +2,7 @@ import React from "react";
 import "./components.css"
 
 
-const Search = ({ changeHandler, changeCategoryHandler, changeSortingHandler }) => {
+const Search = ({ changeHandler, changeCategoryHandler, priceSortingHandler }) => {
   return (
     <div className="search">
       <div className="arrange">
@@ -21,7 +21,7 @@ const Search = ({ changeHandler, changeCategoryHandler, changeSortingHandler }) 
       </div>
       <div className="arrange arrange-category">
         <p>Sort by price</p>
-        <select onChange={changeSortingHandler}>
+        <select onChange={priceSortingHandler}>
           <option selected disabled>select price order</option>
           <option value="lowToHigh">Low to High</option>
           <option value="highToLow">High to Low</option>

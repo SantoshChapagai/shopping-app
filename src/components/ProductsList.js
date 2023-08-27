@@ -13,6 +13,7 @@ const ProductsList = () => {
   const [filterItems, setFilterItems] = useState([]);
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [priceCategory, setPriceCategory] = useState();
 
 
   useEffect(() => {
@@ -41,12 +42,23 @@ const ProductsList = () => {
     setSelectedCategory(selectedCategory);
   }
 
+  const priceSortingHandler = (event) => {
+    const priceCategory = event.target.value;
+    setPriceCategory(priceCategory);
+  }
+
 
   const applyFilters = () => {
-    let filteredProducts = products;
+    let filteredProducts = [...products];
 
     if (search) {
       filteredProducts = filteredProducts.filter(product => product.title.toLowerCase().includes(search));
+    }
+
+    if (priceCategory === "lowToHigh") {
+      filteredProducts.sort((a, b) => a.price - b.price);
+    } else if (priceCategory === "highToLow") {
+      filteredProducts.sort((a, b) => b.price - a.price);
     }
 
     if (selectedCategory) {
@@ -54,7 +66,7 @@ const ProductsList = () => {
 
     }
     setFilterItems(filteredProducts);
-    return filteredProducts;
+    // return filteredProducts;
   }
 
 
@@ -63,7 +75,7 @@ const ProductsList = () => {
   return (
     <div>
       <div>
-        <Search changeHandler={changeHandler} changeCategoryHandler={changeCategoryHandler} />
+        <Search changeHandler={changeHandler} changeCategoryHandler={changeCategoryHandler} priceSortingHandler={priceSortingHandler} />
       </div>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {filterItems.map((product) => (
