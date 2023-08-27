@@ -12,6 +12,8 @@ const ProductsList = () => {
   const [products, setProducts] = useState([]);
   const [filterItems, setFilterItems] = useState([]);
   const [search, setSearch] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+
 
   useEffect(() => {
     axios.get(api)
@@ -24,17 +26,44 @@ const ProductsList = () => {
       });
   }, []);
 
+  useEffect(() => {
+    applyFilters();
+  });
+
   const changeHandler = (event) => {
     const inputQuery = event.target.value.toLowerCase();
     setSearch(inputQuery);
-    const filteredProducts = products.filter(product => product.title.toLowerCase().includes(inputQuery));
-    setFilterItems(filteredProducts);
-
+    applyFilters();
   }
+
+  const changeCategoryHandler = (event) => {
+    const selectedCategory = event.target.value;
+    setSelectedCategory(selectedCategory);
+  }
+
+
+  const applyFilters = () => {
+    let filteredProducts = products;
+
+    if (search) {
+      filteredProducts = filteredProducts.filter(product => product.title.toLowerCase().includes(search));
+    }
+
+    if (selectedCategory) {
+      filteredProducts = filteredProducts.filter(product => product.category === selectedCategory);
+
+    }
+    setFilterItems(filteredProducts);
+    return filteredProducts;
+  }
+
+
+
+
   return (
     <div>
       <div>
-        <Search changeHandler={changeHandler} />
+        <Search changeHandler={changeHandler} changeCategoryHandler={changeCategoryHandler} />
       </div>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {filterItems.map((product) => (

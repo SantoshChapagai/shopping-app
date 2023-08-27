@@ -14,11 +14,13 @@ function App() {
     <CartProvider>
       <div className="App">
         <Header />
-        <RouterProvider router={router} />
+        <div className="content-wrapper">
+          <RouterProvider router={router} />
+          <div className="FooterSpacer" />
+        </div>
         <Footer />
       </div>
     </CartProvider>
-
   );
 }
 export default App;
