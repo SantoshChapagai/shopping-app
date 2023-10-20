@@ -1,4 +1,5 @@
 # Shopping app
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=SantoshChapagai_shopping-app&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=SantoshChapagai_shopping-app)
 
 ## stack
 - React, Bootstrap
