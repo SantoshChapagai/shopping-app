@@ -22,7 +22,7 @@ const Product = (props) => {
     }
   }
 
-  const totalHeight = show ? "auto" : "auto";
+  const totalHeight = show ? "auto" : "48rem";
 
   return (
 
