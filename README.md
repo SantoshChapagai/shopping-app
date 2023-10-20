@@ -1,5 +1,8 @@
 # Shopping app
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=SantoshChapagai_shopping-app&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=SantoshChapagai_shopping-app)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=SantoshChapagai_shopping-app&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=SantoshChapagai_shopping-app)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=SantoshChapagai_shopping-app&metric=bugs)](https://sonarcloud.io/summary/new_code?id=SantoshChapagai_shopping-app)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=SantoshChapagai_shopping-app&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=SantoshChapagai_shopping-app)
 
 ## stack
 - React, Bootstrap
