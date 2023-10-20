@@ -1,9 +1,9 @@
-
 import { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import "./pages.css";
 import AddToCart from '../components/AddToCartButton';
+import PropTypes from "prop-types";
 
 const Product = (props) => {
   const { id, title, category, price, description, image, rating } = props;
@@ -50,6 +50,19 @@ const Product = (props) => {
     </div>
 
   );
+};
+
+Product.propTypes = {
+  id: PropTypes.number,
+  title: PropTypes.string,
+  category: PropTypes.string,
+  price: PropTypes.number,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  rating: PropTypes.shape({
+    rate: PropTypes.number,
+    count: PropTypes.number
+  })
 };
 
 export default Product;

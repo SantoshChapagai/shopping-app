@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Navbar } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import { useCart } from '../hooks/Context';
-// import { Navbar, Container } from 'react-bootstrap/Navbar';
 
 
 const Header = () => {

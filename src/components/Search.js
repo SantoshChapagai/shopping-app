@@ -1,5 +1,6 @@
 import React from "react";
 import "./components.css"
+import  PropTypes  from "prop-types";
 
 
 const Search = ({ changeHandler, changeCategoryHandler, priceSortingHandler }) => {
@@ -30,5 +31,12 @@ const Search = ({ changeHandler, changeCategoryHandler, priceSortingHandler }) =
     </div>
   );
 }
+
+Search.propTypes = {
+  changeHandler: PropTypes.func,
+  changeCategoryHandler: PropTypes.func,
+  priceSortingHandler: PropTypes.func
+};
+
 
 export default Search;
